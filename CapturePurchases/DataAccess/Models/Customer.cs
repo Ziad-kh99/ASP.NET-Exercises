@@ -1,3 +1,5 @@
+using Microsoft.Identity.Client;
+
 namespace DataAccess.Models;
 
 public class Customer
@@ -8,4 +10,6 @@ public class Customer
     public string Email { get; set; }
     public string Phone { get; set; }
     public string Address { get; set; }
-}
+
+    public ICollection<Order> Orders { get; set; } = new List<Order>();
+} 
